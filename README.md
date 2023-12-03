@@ -20,4 +20,9 @@ DB_DIALECT=mysql
 NODE_ENV=development
 
 3º Passo - para criar o banco pela primeira vez coloque o código abaixo:
+
+primeiro crie o banco
+npx sequelize-cli db:create
+
+depois o código abaixo
 npx sequelize-cli db:migrate
