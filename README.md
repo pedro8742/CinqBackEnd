@@ -6,14 +6,18 @@ Este repositório utiliza as dependências Express e Sequelize.
 1º Passo - Iniciar NPM
 Acesse o terminal e execute o seguinte comando para iniciar o NPM e suas dependências.
 
-NPM install
+npm install
 
 2º Passo - Conexão com Banco de Dados pelo Sequelize
-No Arquivo db.js insira os dados do seu banco nos respectivos espaços:
+No Arquivo .env insira os dados do seu banco nos respectivos espaços:
 
-const Sequelize = require('sequelize'); const sequelize = new Sequelize('nome do banco', 'usuario', 'senha do banco', { dialect: /* one of 'mysql' | 'postgres' | 'sqlite' | 'mariadb' | 'mssql' | 'db2' | 'snowflake' | 'oracle' */ host: 'localhost', port: 3306 });
+DB_NAME=cinq
+DB_USER=root
+DB_PWD=123
+DB_HOST=localhost
+DB_PORT=3306
+DB_DIALECT=mysql
+NODE_ENV=development
 
-3º Passo - Execute o Nodemon para rodar sua Aplicação
-Seguinte comando para executar seu Script, através do Nodemon.
-
-npm run dev
+3º Passo - para criar o banco pela primeira vez coloque o código abaixo:
+npx sequelize-cli db:migrate
