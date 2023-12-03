@@ -56,10 +56,6 @@ const Usuario = database.define("usuario", {
     type: Sequelize.STRING,
     allowNull: false,
   },
-  dataRegistro: {
-    type: Sequelize.DATEONLY,
-    allowNull: false,
-  },
   ativo: {
     type: Sequelize.BOOLEAN,
     allowNull: false,

@@ -42,7 +42,6 @@ async function postUsuario(req, res) {
       profissao,
       cep,
       endereco,
-      dataRegistro,
       ativo,
     } = req.body;
 
@@ -60,7 +59,6 @@ async function postUsuario(req, res) {
       !profissao ||
       !cep ||
       !endereco ||
-      !dataRegistro ||
       !ativo
     ) {
       res.status(422).send("Você precisa preencher todos os campos");
@@ -81,7 +79,6 @@ async function postUsuario(req, res) {
       profissao,
       cep,
       endereco,
-      dataRegistro,
       ativo,
     }); // Cria um novo usuário no banco de dados
     res.status(201).send("Usuário adicionado com sucesso");
